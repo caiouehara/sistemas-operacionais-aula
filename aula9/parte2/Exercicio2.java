@@ -1,12 +1,12 @@
 import java.io.*;
 
 public class Exercicio2{
-	public static void main(String[] args){
+	public static void main(String args[]){
 		//declarando as variáveis
 		ProcessBuilder pb;
 		Process proc;
 
-		pb = new ProcessBuilder("ls", "-al").inheritIO();
+		pb = new ProcessBuilder("../parte1/fib2.o", args[0]).inheritIO();
 		try{
 			proc = pb.start(); //inicia o processo
 			proc.waitFor();
