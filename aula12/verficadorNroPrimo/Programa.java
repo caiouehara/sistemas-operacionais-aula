@@ -17,16 +17,14 @@ public class Programa {
 			thrd = new Thread(grupo, new PrimeCheckerThread(Integer.parseInt(args[i])));
 			thrd.start();
 
-			/*
 			try {
 				thrd.join();	// espera pelo termino da thread
+				System.out.println(String.format("[%s] Comportamento encerrado", thrd.threadId()));
 						
 				// gets the ID of the current thread 
-				System.out.println(String.format("[%s] Comportamento encerrado", thrd.threadId()));
 			} catch (InterruptedException ie) { 
 				System.out.println("Erro: " + ie);
 			}
-			*/
 		}
 		
 		while (grupo.activeCount() > 0){
